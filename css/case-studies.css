@@ -131,6 +131,10 @@ h5{
 	justify-content: center;
 }
 
+.comments.asset-view .arrow{
+	height: calc(60% + (100vw/270));
+}
+
 .comments.vertical{
 	display: flex;
 	gap: 13vh;
@@ -144,36 +148,57 @@ h5{
 	top: 56px;
 }
 .comments.vertical.left{
-	left: 150px;
-	top: 45px;
+	left: 15vw;
+	top: 6%;
 	gap: 11vh;
 }
 
 .comments.vertical.right{
-	top: 81px;
+	top: 10%;
 	gap: 6vh;
+	right: 12vw;
 }
 
 .comments.vertical.right .comment .arrow{
-	left: -50px;
-	top: -36px;
+	left: -48%;
+	top: -48%;
 	width: 3%;
 	transform: rotate(90deg);
-	height: 70px;
+	height: calc(76% + (100vw/20000));
 }
 
 .comments.vertical.left .comment .arrow{
 	width: 3%;
 	transform: rotate(270deg);
-	top: -23%;
+	top: -1vh;
 	left: 107%;
-	height: 78px;
+	height: calc(80% + (100vw/20000));
 }
 
 .comments.vertical .comment{
 	width: 100%;
 }
 
+#breadcrumbs{
+	left: 190%;
+	width: 0px;
+	height: calc(21% + (100vw/19));
+	transform: scaleX(-1) rotate(90deg);
+	top: 37%;
+}
+#search-accounts{
+	transform: rotate(89deg) scaleY(-1);
+	top: -138px;
+	left: 136px;
+	height: calc(50% + (100vw/14));
+	width: 85%;
+}
+#switch-account-type{
+	height: calc(34% + (100vw/20000));
+}
+.video-wrap-text.transaction-panel .comment{
+	z-index: 1;
+}
 p{
 	font-size: 16px;
 	font-style: normal;
@@ -277,7 +302,7 @@ x
 	margin-top: var(--spaceInsideDiv);
 }
 
-.h3-bullet{margin-top: var(--spaceInsideDiv);}
+.h3-bullet{margin-top: var(--spaceBetweenSections);}
 .h3-bullet .icon{
 	width: 40px;
 	height: 40px;
@@ -295,7 +320,7 @@ x
 .light-blue-area{
 	/* background-color: rgba(137, 178, 255, 0.10); */
 	/* margin-top: var(--spaceBetweenSections); */
-	padding: var(--spaceBetweenSections) 0px;
+	padding: var(--spaceBetweenSections) 0px 0px;
 }
 
 .bullet .icon{
@@ -361,6 +386,7 @@ x
 
 .full-page-img-container.margins{
 	margin: var(--spaceInsideDiv)  0px;
+	padding: 0px;
 }
 
 .full-page-img-container video, .full-page-img-container img{
@@ -377,7 +403,7 @@ x
 #searchable{
 	position: absolute;
 	width: 12vw;
-	left: 166px;
+	left: 13vw;
 	top: -5%;-8%;
 }
 
@@ -391,7 +417,7 @@ x
 #relational{
 	position: absolute;
 	width: 12vw;
-	left: 166px;
+	left: 13vw;
 	top: 25%;
 }
 
@@ -403,19 +429,19 @@ x
 	transform: rotate(270deg);
 }
 
-#last-used{top: -29px;}
+#last-used{top: -29px;left: 76%;top: -8%;width: 15vw;position: absolute;}
 
 #last-used .arrow{transform: rotate(269deg) scaleY(-1);left: -8%;/* left: 47%; */top: 81%;width: 30%;height: calc(80% + (100vw/2));height: calc(80% + (100vw/1093));height: calc(80% + (100vw/2000));}
 /*password protected*/
 
-#tabs{position: absolute;top: 46%;width: 14vw;}
+#tabs{position: absolute;top: 55%;width: 14vw;left: 13vw;}
 
 #tabs .arrow{
-	left: 157px;
+	left: 95%;
 	transform: scaleY(-1) rotate(273deg);
-	top: -104px;
-	height: 106px;
-	width: 60%;
+	top: -126%;
+	height: calc(80% + (100vw/25));
+	width: 7vw;
 }
 
 #scrollable{
@@ -428,14 +454,14 @@ x
 	left: 29%; width: calc(4%); top: -176%; transform: scaleY(-1); height: calc(80% + (100vw/34))
 }
 
-#approve{left: 86%;top: -260px;width: 15vw;}
+#approve{left: 76%;top: 50%;width: 15vw;position: absolute;}
 
 #approve .arrow{
 	left: -31%;
 	width: 16%;
-	top: 105px;
+	top: 102%;
 	transform: rotate(810deg) scaleX(-1);
-	height: 60px;
+	height: calc(80% + (100vw/20000));
 }
 /*under 580px (size of grid + little bit) */
 @media only screen and (max-width: 580px) {
