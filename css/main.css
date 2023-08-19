@@ -122,23 +122,25 @@ h5{
     mix-blend-mode: inherit;
 }
 
+
 .outline{
     /* font-family: 'Montserrat', sans-serif; */
     font-weight: 700;
     letter-spacing: 2.1px;
     text-shadow:
-    -.7px -.7px 0 var(--outline-link-color),
-     0   -.7px 0 var(--outline-link-color),
-     .7px -.7px 0 var(--outline-link-color),
-     .7px  0   0 var(--outline-link-color),
-     .7px  .7px 0 var(--outline-link-color),
-     0    .7px 0 var(--outline-link-color),
-    -.7px  .7px 0 var(--outline-link-color),
-    -.7px  0   0 var(--outline-link-color);
+    -1px -1px 0 var(--outline-link-color),
+     0   -1px 0 var(--outline-link-color),
+     1px -1px 0 var(--outline-link-color),
+     1px  0   0 var(--outline-link-color),
+     1px  1px 0 var(--outline-link-color),
+     0    1px 0 var(--outline-link-color),
+    -1px  1px 0 var(--outline-link-color),
+    -1px  0   0 var(--outline-link-color);
     color: var(--background-color);
     /*transition: all var(--color-change-timing);*/
     /* font-size: 29px; */
 }
+
 
 
 
@@ -507,30 +509,26 @@ article.era {
     /* top: -50vh; */
     transform: translateY(-25vh);
     clear: left;
-    ft; */
-;
     top: 0;
 }
 .project.ios-app{
     overflow: hidden;
 }
 .project-img{
-    transition-duration: .2s;
-    /* float: right; */
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition: all 4s ease; 
+ 
+    -webkit-transform: translate3d(0,0,0);
     max-height: 500px;
     width: 100%;
-    vertical-align: top\;
     vertical-align: middle;
     margin-top: 48px;
-    /* grid-column-start: 2; */
-    /* grid-column-end: 8; */
-    /* display: flex; */
 }
 
-/*.link:hover .project-img{
-    transform: scale(1.05);
-    cursor: pointer;
-}*/
+
 
 .grey-rect{
     position: absolute;
@@ -652,6 +650,11 @@ p.small{
 
 /* ------------------------------------------------------------------------------------------------ */
 @media screen and (max-width: 500px){
+    #main{
+        padding-top: 0px;
+        top: -18vh;
+    }
+  
     .contact-links{
         display: flex;
         flex-direction: column;
@@ -681,7 +684,7 @@ p.small{
     .text-cont{
         left: 50%;
         top: 50vh;
-        transform: translateX(-50%) translateY(-25vh);
+        transform: translateX(-50%) translateY(-36vh);
         width: 92%;
         text-align: center;
     }
@@ -792,7 +795,7 @@ p.small{
         position: absolute !important;
     }
     .era::after{
-        display: block;
+        /* display: block; */
     }
 
     #contact-page .title{
@@ -804,23 +807,28 @@ p.small{
     .blue-bg{
         display: none;
     }
+    .era-title-text{
+        padding: 0px;
+        max-width: 100%;
+    }
     .era-title{
         position: initial;
         color: black;
-        width: 100%;
+        width: 90%;
         left: 0px;
         /* text-align: center; */
         margin: auto;
         transform: none;
         float: none;
-        margin-bottom: 80px;
+        /* margin-bottom: 80px; */
     }
     .project{
         transform: none;
         width: 100%;
-        margin-top: 70px;
+        margin-bottom: 20vh;
         position: static;
-        margin-bottom: 70px;
+        margin-bottom: 20vh;
+        margin-top: 10vh;
     }
  
 

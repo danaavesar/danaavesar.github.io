@@ -198,7 +198,7 @@ h2.caption-text{
 
 img, .video-wrap{
 	FONT-WEIGHT: 600;
-	margin: 140px 0px;
+	margin: var(--spaceBetweenSections) 0px;
 	width: 100%;
 }
 
@@ -367,6 +367,7 @@ x
 	max-width: 814px;
 	height: auto;
 	margin: auto;
+	width: 92%;
 }
 
 .video-no-container{
@@ -438,10 +439,14 @@ x
 }
 /*under 580px (size of grid + little bit) */
 @media only screen and (max-width: 580px) {
+	:root{
+		--spaceInsideDiv: 64px;
+		--smallSpaceInsideDiv: 32px;
+		--spaceBetweenSections: 72px;
+		--spaceBetweenHeaders:88px;
+	}
 	.text-main, .title-main{
 		margin:24px;
 	}
-	img{
-		padding: 72px 0px;
-	}
+
 }
