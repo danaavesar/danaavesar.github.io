@@ -145,9 +145,9 @@ $(function() {
 	}
 // 234 shapes (26*9) //9 containers //numberShapes this variable isnt being used
 	function makeShapes(numberShapes, numContainers){ 
-		var transitionDurationMax = 1;
+		var transitionDurationMax = 2;
 		var transitionDelay = 0;
-		var transitionDelayMax = .2;
+		var transitionDelayMax = .6;
 		var transitionDuration;
 		for( var leafNum=0; leafNum< numContainers ; leafNum++){
 			var newLeafContainer = "<div class='leafContainer lf" +leafNum+ "'></div>";
@@ -1028,34 +1028,10 @@ $(function() {
 
 
 
-	/////// -------------- scroll magic & page triggers --------------------- //////
-
-	// var interval = 300;
-// var hiTrigger = 0;
-// var SanDiegoTrigger = hiTrigger + interval;
-// var NewYorkTrigger = SanDiegoTrigger + interval;
-// var TelAvivTrigger = NewYorkTrigger + interval;
-// var projectsTrigger = TelAvivTrigger +interval;
-
-$( ".contact" ).on( "click", function() {
-  $("#contact-page").toggleClass('display');
-  $(".img-container").toggleClass('active');
-  $(".top-bar").addClass("contact");
-  $(".top-link-color").addClass("blue");
-});
-
-$("#contact-page:not(a)").on('click', function(){
- 	$("#contact-page").toggleClass('display');
-	$(".img-container").toggleClass('active');
-  	$(".top-links").toggleClass('contact-links');
-  	$(".top-bar").removeClass("contact");
-  	$(".top-link-color").removeClass("blue");
-})
 
 $(".shape").addClass("project-plant")
 $(".leafContainer").addClass("project-plant");
-// init controller
-var controller = new ScrollMagic.Controller();
+
 var peach = "#FFE0CE";
 $("#tlv").hover(function() {
 	$(".shape").addClass("cactus");
@@ -1166,94 +1142,35 @@ var projects =  []; // my array
 // });
 
 
-console.log(projects);
+	/////// -------------- scroll magic & page triggers --------------------- //////
+var openContactPage = function(){
+	console.log("click")
+	 $("#contact-page").toggleClass('display');
+  	$(".img-container").toggleClass('active');
+  	$(".top-bar").addClass("contact");
+  	$("body").addClass("other-page");
+}
 
+var closeContactPage = function(page){
+	console.log("close")
+	$("#contact-page").toggleClass('display');
+	$(".img-container").toggleClass('active');
+  	$(".top-links").toggleClass('contact-links');
+  	$(".top-bar").removeClass("contact");
+  	console.log(page);
+  	if(page == "projects"){
+  			
+  	}else if(page == "home"){
+  		$("body").removeClass("other-page");
+  	}
+  	
+}
+var page = "home";
+$( ".contact" ).on( "click", function(){openContactPage()});
 
-
-//.setItem('projects', JSON.stringify(projects));
-
-
-// var scene = new ScrollMagic.Scene({triggerElement: "#hi-trigger", triggerHook: 0, duration: 200})
-// 				.on("enter", function () {
-// 					$("#hi-container").addClass('show');
-// 					$("#home-anchor").addClass('active');
-// 					$(".name-small").removeClass('show');
-// 					//change shape
-// 					$(".leafContainer").addClass("project-plant");
-// 					$(".shape").addClass("project-plant");
-					
-// 				})
-// 				.on("leave", function () {
-// 					$(".name-small").addClass('show');
-// 					$("#home-anchor").removeClass('active');
-// 					$("#hi-container").removeClass('show');
-// 					//hide plant
-// 					$(".leafContainer").removeClass("project-plant");
-// 					$(".shape").removeClass("project-plant");
-// 				})
-// 				.setTween("#hi-line", 0.5, {height: 20})
-// 				 //.addIndicators({name:'hi-trigger'})
-				 
-// 				.addTo(controller);
-
-// var scene = new ScrollMagic.Scene({triggerElement: "#tel-aviv-trigger", triggerHook: 0, duration: 200})
-// 				.on("enter", function () {
-// 					$(".leafContainer").addClass("cactus");
-// 					$(".shape").addClass("cactus");
-// 					$("[data-aos-anchor='#tel-aviv-trigger']").addClass('active');
-// 					$("#tel-aviv-anchor").addClass('active');
-// 				;
-// 				})
-// 				.on("leave", function () {
-// 					$("[data-aos-anchor='#tel-aviv-trigger']").removeClass('active');
-// 					$("#tel-aviv-anchor").removeClass('active');
-// 				})
-// 				.setTween("#hi-line", 0.5, {height: 0})
-// 				.setTween("#tel-aviv-line", 0.5, {height: 20})
-// 				//.addIndicators({name: "tel-aviv"})
-// 				.addTo(controller);
-
-// var scene = new ScrollMagic.Scene({triggerElement: "#new-york-trigger", triggerHook: 0, duration: 200})
-// 				.on("enter", function () {
-// 					$(".leafContainer").addClass("liberty");
-// 					$(".shape").addClass("liberty");
-// 					$("[data-aos-anchor='#new-york-trigger']").addClass('active');
-// 					$("#new-york-anchor").addClass('active');
-// 					$("[data-aos-anchor='#tel-aviv-trigger']").removeClass('active');
-// 					$("#tel-aviv-anchor").removeClass('active');
-// 					console.log('new york');
-					
-// 							})
-// 				.on("leave", function () {
-// 					$(".leafContainer").removeClass("liberty");
-// 					$(".shape").removeClass("liberty");
-// 					$("[data-aos-anchor='#new-york-trigger']").removeClass('active');
-// 					$("#new-york-anchor").removeClass('active');
-// 				})
-// 				.setTween("#new-york-line", 0.5, {height: 20})
-// 				//.addIndicators({name:'new-york-trigger'})
-// 				.addTo(controller);
-
-// var scene = new ScrollMagic.Scene({triggerElement: "#san-diego-trigger", triggerHook: 0, duration: 200})
-// 				.on("enter", function () {
-// 					$(".leafContainer").addClass("palmtree");
-// 					$(".shape").addClass("palmtree");
-// 					$("[data-aos-anchor='#san-diego-trigger']").addClass('active');
-// 					$("#san-diego-anchor").addClass('active');
-// 					$("#intro").addClass('palmtree');
-					
-// 							})
-// 				.on("leave", function () {
-// 					$(".leafContainer").removeClass("palmtree");
-// 					$(".shape").removeClass("palmtree");
-// 					$("[data-aos-anchor='#san-diego-trigger']").removeClass('active');
-// 					$("#san-diego-anchor").removeClass('active');
-// 					$("#intro").removeClass('palmtree');
-// 				})
-				
-// 				 //.addIndicators({name:'san-diego-trigger'})
-// 				.addTo(controller);
-
+$("#contact-page:not(a)").on('click', function(){closeContactPage(page)} );
+// init controller
+var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({triggerElement: "#projects-trigger", triggerHook: 0})
 				.on("enter", function () {
 					$('#intro').addClass('transition');
@@ -1262,19 +1179,13 @@ var scene = new ScrollMagic.Scene({triggerElement: "#projects-trigger", triggerH
 					}, 400);
 					$(".top-bar").addClass("projects");
 
-					// $("html").attr("style","--link-color:var(--electric-blue);--link-color-hover:var(--dark-blue)");
-					var colors =  {
-						"--link-color" : "var(--electric-blue)",
-						"--link-color-hover" : "var(--dark-blue)"
-					}
-					$("body.homepage").css(colors)
-					$(".top-link-color").addClass("blue");
 					$(".name-color-mobile").css("fill", "var(--dark-blue)")
-
+					$("body").addClass("other-page");
 					setTimeout(function () {
 						$(".top-bar::before").css("background-color","white")
 					}, 500);
-
+					
+					page = "projects"
 					
 				})
 				.on("leave", function () {
@@ -1282,26 +1193,23 @@ var scene = new ScrollMagic.Scene({triggerElement: "#projects-trigger", triggerH
 					$('#intro').removeClass('transition');
 					$("#san-diego-anchor").addClass('active');
 					$(".top-bar").removeClass("projects");
-				
-					// $("html").attr("style","--link-color:var(--peach2); --top-bar-background: none; --link-color-hover:var(--pink)");
-
-					var colors =  {
-						"--link-color" : "var(--peach2)",
-						"--link-color-hover" : "var(--pink)"
-					}
-					$("body.homepage").css(colors)
-					$(".top-link-color").removeClass("blue");
+					$("body").removeClass("other-page");
 					$(".name-color-mobile").css("fill", "white")
 					
+					page = "home";
 				})
 				// .addIndicators({name: "projects"})
 				.addTo(controller);
 
-
-
-		
-
-
 });
+
+
+
+
+
+
+
+
+
 
 	

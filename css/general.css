@@ -29,7 +29,7 @@ body,html,.body-wrap{
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 24px;
+    padding-top: 32px;
     box-sizing: border-box;
 }
 
@@ -70,6 +70,8 @@ body,html,.body-wrap{
     /* mix-blend-mode: plus-lighter; */
     fill: var(--brown);
 }
+
+
 
 .logo-color{
     fill: white;
@@ -198,13 +200,13 @@ a{
 }
 
 .contact-links .link{
-    color: #3436AE;
+    color: var(--link-color);
     margin-right: 20px;
     text-decoration: none;
 }
 
 .contact-links .link:hover{
-    color: #0004DE;
+    color: var(--link-color-hover);
 }
 
 
