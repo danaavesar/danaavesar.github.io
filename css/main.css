@@ -670,7 +670,7 @@ p.small{
 
         stroke: white;
     }
-     .top-link-color.blue{
+     .top-bar.contact .top-link-color, .top-bar.how .top-link-color{
         stroke: var(--dark-blue);
     }
     .name-color-mobile{

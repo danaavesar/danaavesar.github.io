@@ -1,4 +1,5 @@
-$(function() {
+// $(function() {
+ // $(document).ready(function() {
 	///////-------location variables-------///////
 		var leafContX;
 		var cactusBaseY;
@@ -55,9 +56,10 @@ $(function() {
 	}
 
 
-	$( window ).resize(function() {
-		setPositions();
-	});
+	// $( window ).resize(function() {
+	// 	setPositions();
+	// 	drawAll();
+	// });
 
 	///////-------make the html containers, divs, and attach them to the html -------///////
 	makeShapes(numberShapes,numberOfContainers);
@@ -143,6 +145,7 @@ $(function() {
 
 		
 	}
+
 // 234 shapes (26*9) //9 containers //numberShapes this variable isnt being used
 	function makeShapes(numberShapes, numContainers){ 
 		var transitionDurationMax = 2;
@@ -1079,9 +1082,7 @@ $(".plant").hover(function() {
 	$(".shape").removeClass("palmtree cactus liberty");
 });
 
-Splitting({
-	whitespace: true
-})
+
 
 $(".menu-icon").mousedown(function(){
 	$("#mySidenav").css("width", "140px");
@@ -1143,32 +1144,7 @@ var projects =  []; // my array
 
 
 	/////// -------------- scroll magic & page triggers --------------------- //////
-var openContactPage = function(){
-	console.log("click")
-	 $("#contact-page").toggleClass('display');
-  	$(".img-container").toggleClass('active');
-  	$(".top-bar").addClass("contact");
-  	$("body").addClass("other-page");
-}
 
-var closeContactPage = function(page){
-	console.log("close")
-	$("#contact-page").toggleClass('display');
-	$(".img-container").toggleClass('active');
-  	$(".top-links").toggleClass('contact-links');
-  	$(".top-bar").removeClass("contact");
-  	console.log(page);
-  	if(page == "projects"){
-  			
-  	}else if(page == "home"){
-  		$("body").removeClass("other-page");
-  	}
-  	
-}
-var page = "home";
-$( ".contact" ).on( "click", function(){openContactPage()});
-
-$("#contact-page:not(a)").on('click', function(){closeContactPage(page)} );
 // init controller
 var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({triggerElement: "#projects-trigger", triggerHook: 0})
@@ -1201,7 +1177,7 @@ var scene = new ScrollMagic.Scene({triggerElement: "#projects-trigger", triggerH
 				// .addIndicators({name: "projects"})
 				.addTo(controller);
 
-});
+// });
 
 
 

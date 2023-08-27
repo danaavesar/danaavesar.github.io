@@ -20,13 +20,14 @@
 		<title>Dana Avesar Portfolio</title>
 		<meta name=description content="Dana Avesar portfolio website">
 		<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;800&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/shapes.css">
 		<link rel="stylesheet" href="css/general.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;800&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
-		<style></style>
 		
+		<style></style>
+
 	
 	</head>
 	<body class="homepage">
@@ -59,23 +60,16 @@
 
 				
 			</div>
+
 			<div id="hi-trigger" class="trigger"></div>
 			
 			<div id="projects-trigger" class="trigger"></div>
 			<div id="intro">
-				<div  id="drawing">
-					<!-- <div class="items" id="js-scene">
-						<div class="box box1 green"></div>
-						<div class="box box2 orange"></div>
-						<div class="box box3 grey"></div>
 
-					</div> -->
+				<div  id="drawing">
 				</div>
 				<div id="text-intro">
-						<!-- <div id="link-div">
-							
-							
-						</div> -->
+						
 						<div id="hi-container" class="fixed">
 							<img src="imgs/name-big.svg" class="name link big"/>
 						</div>
@@ -85,10 +79,10 @@
 
 							
 						</div>
-						<!-- <h2 class="animated-text" data-splitting>Designing in Figma, in a yoga, pilates, ballet, hip hop, modern class, on the beach, playing with dogs, listening to R&B Soul, singing, playing with code, stretching, playing the guitar</h2>
-					 -->
 				</div>
+				<p class="how-link"> How is it made? </p>
 			</div>
+
 			<div id="main">	
 				<div class="blue-bg"></div>
 					<article class="era">
@@ -309,20 +303,37 @@
 			
 				<!-- <div id="mouse-cursor4"  class="mouse-cursor"></div> -->
 			</div>
-		<div id="contact-page">
+		<div id="contact-page" class="overlay-page">
 			<div class='img-container'><img src="imgs/me.jpg"/></div>
 				<h1 class="title"> Lets connect! </h1>
 				
 				<div class="contact-links"><a class="link" href="https://www.facebook.com/danabananalove/" target="_blank">Facebook</a><a class="link" href="https://www.linkedin.com/in/dana-avesar/" target="_blank">Linked In</a><a class="link" href="mailto:danaavesar@gmail.com" target="_blank">danaavesar@gmail.com</a></div>
 				<p>This site was designed and coded by me. Feel free to copy anything you would like. <p>
 		</div>
+		<div id="how-its-made-page" class="overlay-page">
+			<div class="container">
+				<div class="text-main">
+					<h1> How it's made </h1>
+					<p>Built from a repetition of HTML divs that transition between position, scale, and rotation on each hover with CSS animations. No fancy libraries! 
+					<br><br>
+					I was inspired by <a class="link" target="_blank" href="http://species-in-pieces.com/"> Bryan James' work “In pieces” </a> who created animal illustrations from tinkering with CSS polygons. I took this idea and simplified even more by just repeating the same shape rather than morphing them. 
+					<br><br>
+					First I played in Adobe Illustrator. I chose a leaf shape because of its simplicity and ubiquity all around us. It always amazed me that using mathematical patterns of repetition, harmony, and symmetry, nature can create such intricate forms from one simple shape. 
+					<br><br>
+					Then, I thought - ok great, now how do I create CSS classes for 200 shapes? I remembered my “for loops” and iterative variables. I jumped in the water and using jQuery played with functions that created iterative rotations, positions, and scales for each shape until I was able to recreate the illustrations I made in Ilustrator. Then, I attached these dynamic CSS styles to the page on  load. When hovering between the city names, I toggle css styles for each shape which creates the transition effect.
+
+					</p>
+				</div>
+				<img src="imgs/fireblocks/how-its-made-img.svg"/>
+			</div>
+		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js
 "></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="plugins/animation.gsap.js"></script>
-<script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="plugins/animation.gsap.js"></script> -->
 <script src="js/shapes-css-styles.js"></script>
+<script src="js/overlays.js"></script>
 
 	
 <!-- 	  -webkit-clip-path 0.66s 0.425s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.66s 0.18s, -webkit-transform 0.3s, margin 0.3s 0.425s	
