@@ -233,6 +233,10 @@ a{
     scale:.7;
 }
 
+#contact-page img{
+    margin: 0px;
+}
+
 #contact-page .title{
     font-size: 50px;
     font-style: italic;
@@ -286,8 +290,8 @@ a{
         color: #7D4A4A;
 }
 
-#dialogText:after{
-    content: "Feel free to contact me for the password!";
+#dialogText + p{
+    /*content: "Feel free to <span class='contact'> contact me </span> for the password!";*/
     display: block;
     font-size: 16px;
     font-style: normal;

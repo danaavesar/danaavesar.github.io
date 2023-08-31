@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- copy head, add rhw two last script tags at bottom, add contact page div, add <p> contact me after this page is password protected, add the arrow div -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXEQLFXJZH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -32,6 +32,7 @@
         <div id="dialogWrapCell">
             <div id="mainDialog">
                 <div id="dialogText">This page is password protected.</div>
+                <p> Feel free to <span class='contact link'> contact me </span> for the password! </p>
                 <div id="passArea">
                     <p id="passwordPrompt">Password</p>
                     <input id="pass" type="password" name="pass" autofocus>
@@ -69,6 +70,13 @@
     </div>
     <div id="attribution">
         Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+    </div>
+     <div id="contact-page" class="overlay-page">
+            <div class='img-container'><img src="imgs/me.jpg"/></div>
+            <h1 class="title"> Lets connect! </h1>
+            
+            <div class="contact-links"><a class="link" href="https://www.facebook.com/danabananalove/" target="_blank">Facebook</a><a class="link" href="https://www.linkedin.com/in/dana-avesar/" target="_blank">Linked In</a><a class="link" href="mailto:danaavesar@gmail.com" target="_blank">danaavesar@gmail.com</a></div>
+            <p>This site was designed and coded by me. Feel free to copy anything you would like. <p>
     </div>
     <script>
     (function() {
@@ -216,5 +224,8 @@
         }
     })();
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/overlays.js"></script>
+
   </body>
 </html>

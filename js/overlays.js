@@ -40,7 +40,13 @@ var closeHowPage = function(){
 
 
 var page = "home";
-$( ".contact" ).on( "click", function(){openContactPage()});
+var currentUrl = window.location.href;
+
+if(currentUrl.indexOf("index.html") == -1){
+    page = "other";
+}
+
+$(".contact").on( "click", function(){openContactPage()});
 $( ".how-link" ).on( "click", function(){openHowPage()});
 
 $("#how-its-made-page:not(a)").on('click', function(){closeHowPage(page)} );

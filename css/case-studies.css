@@ -253,7 +253,7 @@ p a{
 }
 
 .video-wrap{
-	background-color: #DFDFDF;
+	background-color: var(--bgColorImgContainer);
 	text-align: center;
 	padding: 24px 0px;
 }
