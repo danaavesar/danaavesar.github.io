@@ -18,7 +18,9 @@
 
 }
 
-
+body.case-study{
+	padding-bottom: var(--spaceBetweenSections);
+}
 
 
 .title-main{

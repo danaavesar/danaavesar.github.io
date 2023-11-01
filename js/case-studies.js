@@ -1,6 +1,6 @@
 
 //get the array of projects from the homepage and convert from string back to array
-var projectsArray;
+/*var projectsArray;
 
 projectsArray =  JSON.parse(localStorage.getItem('projects'));;
 
@@ -28,3 +28,4 @@ var lastProjectIndex = currentProjectIndex - 1;
 var nextProjectImg = projectsArray[nextProjectIndex].attr("img");
 console.log(nextProjectImg);
 $(".next .img").attr("src",nextProjectImg);
+*/
