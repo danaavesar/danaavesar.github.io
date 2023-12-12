@@ -197,7 +197,7 @@ article{
     left: 5%;
     top: 50%;
     transform: translateY(-50%);
-    width: 583px;
+    width: 543px;
     line-height: 160%;
     transition: all var(--color-change-timing);
     /* line-height: 42.679px; */
